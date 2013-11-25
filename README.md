@@ -1,4 +1,0 @@
-calendar
-========
-
-wordpress calendar plugin
