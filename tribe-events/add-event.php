@@ -157,30 +157,37 @@ get_currentuserinfo();
         
         <br />
         
-        <div style="display:inline;">
+        <div style="font-size:11px">
+	    * Selecting 'Allow Registration' opens the event up to free registration.  Filling in any of the options below restricts the registrants to a select target group.
+    	</div>
         
-        	<div style="float:left; width:33%;">
+        <br />
     
-				<input type="text" name="min-job-level" title="1-50" placeholder="1-50" size="2" />
-			    <label><?php _e( 'Minimum Job Level', 'tribe-events-calendar' ); ?></label>
+		<input type="text" name="min-job-level" title="1-50" placeholder="1-50" size="2" />
+		<label><?php _e( 'Minimum Job Level', 'tribe-events-calendar' ); ?></label>
     
-		    </div>
-            
-            <div style="float:left; width:33%;">
+		<br />
     
-			    <input type="text" name="min-gear-level" title="1-90" placeholder="1-90" size="2" />
-			    <label><?php _e( 'Minimum Gear Level', 'tribe-events-calendar' ); ?></label>
+		<input type="text" name="min-gear-level" title="1-90" placeholder="1-90" size="2" />
+		<label><?php _e( 'Minimum Gear Level', 'tribe-events-calendar' ); ?></label>
     
-			</div>
-            
-            <div style="float:left; width:33%;">
-    
-			    <input type="text" name="max-registrants" title="1-8" placeholder="1-8" size="2" />
-			    <label><?php _e( 'Maximum Registrants', 'tribe-events-calendar' ); ?></label>
-    
-			</div>
+		<br />
+        <br />
         
+        <div style="font-size:11px">
+        * A maximum amount of registrants can be defined below.  <br />
+        * Specific amounts of classes/jobs can also be set to restrict the party to a certain style.  <br />
+        * The total amount of specified jobs can only add up to the maximum amount of registrants set.  <br />
+        * If a specific class/job is set to zero it will not allow registrants to register for the event with that class/job. <br />
+        * If the total specific classes/jobs is less than the maximum amount of registrants it will allow the remaining spots to be filled by any remaining classes/jobs not designated as zero.
         </div>
+        
+        <br />
+    
+		 <input type="text" name="max-registrants" title="1-8" placeholder="1-8" size="2" />
+		 <label><?php _e( 'Maximum Registrants', 'tribe-events-calendar' ); ?></label>
+    
+		<br />
         
         <div style="clear:both;height:1px;overflow:none;"></div>
             
