@@ -516,7 +516,7 @@ add_action( 'customize_preview_init', 'twentytwelve_customize_preview_js' );
 
 // add-event script
 function register_addevent_script() {
-	wp_register_script('addevent_js', 'http://localhost/staging/calendar/wp-content/themes/calendar/tribe-events/scripts/add-event.js', array('jquery'), '1.0', true);
+	wp_register_script('addevent_js', get_template_directory_uri().'/tribe-events/scripts/add-event.js', array('jquery'), '1.0', true);
 }
 add_action('init', 'register_addevent_script');
 
