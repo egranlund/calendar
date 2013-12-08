@@ -11,6 +11,11 @@ get_currentuserinfo();
 
 ?>
 
+<script>
+jQuery(function() { jQuery( "#start-date" ).datepicker({ dateFormat: 'mm-dd-yy' }); });
+jQuery(function() { jQuery( "#end-date" ).datepicker({ dateFormat: 'mm-dd-yy' }); });
+</script>
+
 <form>
 	
     <!-- author -->
@@ -33,8 +38,8 @@ get_currentuserinfo();
 	    
 		    <br />
 	    	<br />
-	    
-		    <input type="text" name="start-date" title="Start Date" placeholder="Enter Start Date" />
+
+		    <input type="text" id="start-date" name="start-date" title="Start Date" placeholder="Enter Start Date" />
 		    <div id="start-time" style="display:inline">
 				<select name="start-hour" title="Start Hour">
 					<option value="01">01</option><option value="02">02</option>
@@ -59,7 +64,7 @@ get_currentuserinfo();
 		    
 		    <br />
 		    
-			<input type="text" name="end-date" title="End Date" placeholder="Enter End Date"/>
+			<input type="text" id="end-date" name="end-date" title="End Date" placeholder="Enter End Date"/>
 		    <div id="end-time" style="display:inline">
 			    <select name="end-hour" title="End Hour">
 					<option value="01">01</option><option value="02">02</option>
@@ -184,7 +189,7 @@ get_currentuserinfo();
         
         <br />
     
-		 <input type="text" name="max-registrants" title="1-8" placeholder="1-8" size="2" />
+		 <input type="text" name="max-registrants" size="2" />
 		 <label><?php _e( 'Maximum Registrants', 'tribe-events-calendar' ); ?></label>
     
 		<br />
@@ -259,6 +264,43 @@ get_currentuserinfo();
                 
             </div>
 	    
+        </div>
+        
+        <div style="clear:both;height:1px;overflow:none;"></div>
+        
+        <br />
+        
+        <div style="font-size:11px; display:inline;">
+        * The below options can be used to limit registrants to generic jobs instead of the specific ones above.
+        </div>
+        
+        <div style="clear:both;height:1px;overflow:none;"></div>
+        
+        <br />
+        
+        <div style="display:inline">
+        	
+            <div style="float:left; width:33%;">
+            
+				<input type="text" name="tank" title="0-8"placeholder="0-8" size="2" />
+				<label><?php _e( 'TANKS', 'tribe-events-calendar' ); ?></label>
+                
+            </div>
+            
+            <div style="float:left; width:33%;">
+            	
+                <input type="text" name="heal" title="0-8"placeholder="0-8" size="2" />
+			    <label><?php _e( 'HEALS', 'tribe-events-calendar' ); ?></label>
+                
+            </div>
+            
+            <div style="float:left; width:33%;">
+            
+            	<input type="text" name="dps" title="0-8"placeholder="0-8" size="2" />
+			    <label><?php _e( 'DPS', 'tribe-events-calendar' ); ?></label>
+                
+            </div>
+            
         </div>
         
     </div>

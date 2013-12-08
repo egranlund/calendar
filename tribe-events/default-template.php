@@ -17,6 +17,9 @@ if ( !defined('ABSPATH') ) { die('-1'); }
 global $add_addevent_script;
 $add_addevent_script = true;
 
+global $add_datepicker_script;
+$add_datepicker_script = true;
+
 get_header(); ?>
 
 <?php if(isset($_POST['add-event'])) { ?>

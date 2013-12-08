@@ -529,3 +529,19 @@ function enqueue_addevent_script() {
 	wp_enqueue_script('addevent_js');
 }
 add_action('wp_footer', 'enqueue_addevent_script');
+
+// datepicker
+function register_datepicker_script() {
+	wp_register_script('datepicker_js', get_template_directory_uri().'/tribe-events/scripts/jquery-ui.min.js', array('jquery'), '1.0', true);
+}
+add_action('init', 'register_datepicker_script');
+
+function enqueue_datepicker_script() {
+	global $add_datepicker_script;
+
+	if ( ! $add_datepicker_script )
+		return;
+
+	wp_enqueue_script('datepicker_js');
+}
+add_action('wp_footer', 'enqueue_datepicker_script');
